@@ -1,0 +1,574 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px rgb(225,225,225);
+  float: right;
+  width: 90%;
+  background: rgb(245,245,245);
+}
+
+/* Style the submit button */
+form.example button {
+position: relative;
+  float: right;
+  top: -40px;
+  left: 190px;
+  width: 20%;
+  padding: 10px;
+  background: #004777;
+  color: white;
+  font-size: 17px;
+  border: 1px rgb(225,225,225);
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #00375b;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+p {
+position: relative;
+ top: -270px;
+ left: 800px;
+font-size: 22px;
+}
+
+.container-sm {
+  display: block;
+  position: relative;
+  padding-left: 800px;
+  top: -260px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-sm input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 770px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-sm:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-sm input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-sm input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-sm .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+.genres {
+position: relative;
+ top: -420px;
+  left: 790px;
+font-size: 22px;
+}
+
+body{
+  font-family: "Open Sans";
+  display: flex-end;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 50px;
+  padding-right: 500px;
+  padding-bottom: 50px;
+  padding-left:150px;
+  height: 100vh;
+  overflow: hidden;
+  background: #efd28d;
+  background-size: cover;
+}
+.mainbox{
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+.mainbox:after{
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: url('arrow-left.png') no-repeat;
+  background-size: 32px;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  overflow: hidden;
+  transition: all ease 5s;
+}
+span{
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+}
+.span1{
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  background-color: #004777;
+  top: 120px;
+  left: 0;
+}
+.span2{
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  background-color: #a30000;
+  top: 120px;
+  right: 0;
+}
+.span3{
+  clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+  background-color: #ff7700;
+  bottom: 0;
+  left: 120px;
+}
+.span4{
+  clip-path: polygon(50% 100%, 92% 0, 8% 0);
+  background-color: #00afb5;
+  top: 0;
+  left: 120px;
+}
+.box1 .span3 b{
+   transform: translate(-50%, -50%) rotate(-270deg);
+}
+.box1 .span1 b,
+.box2 .span1 b{
+  transform: translate(-50%, -50%) rotate(185deg);
+}
+.box2 .span3 b{
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.box1 .span4 b,
+.box2 .span4 b{
+  transform: translate(-50%, -50%) rotate(-85deg);
+}
+
+span b{
+  font-size: 20px;
+  color: #eeeeee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.box2{
+  width: 100%;
+  height: 100%;
+  transform: rotate(-135deg);
+}
+.spin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: #004777;
+  color: #fff;
+  box-shadow: 0 5px 20px #000;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+.spin:active{
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+}
+.mainbox.animate:after{
+  animation: animateArrow 0.7s ease infinite;
+}
+@keyframes animateArrow{
+  50%{
+    right: -40px;
+  }
+}
+
+.button {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button2 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button3 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button4 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button5 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button6 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button7 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button8 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button9 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button10 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button11 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button12 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button13 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button14 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button15 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.button16 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.text {
+  color: #000000;
+  font-family: " Courier New", "Courier New", monospace;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -30px;
+  width: 20;
+  text-align: center;
+}
+
+.prev {
+position: absolute;
+  top: 30%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.next {
+position: absolute;
+  top: 30%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #efd28d;
+  color: #efd28d;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.button:hover {
+  background-color: #ebc671;
+}
+.button2:hover {
+  background-color: #ebc671;
+}
+.button3:hover {
+  background-color: #ebc671;
+}
+.button4:hover {
+  background-color: #ebc671;
+}
+.button5:hover {
+  background-color: #ebc671;
+}
+.button6:hover {
+  background-color: #ebc671;
+}
+.button7:hover {
+  background-color: #ebc671;
+}
+.button8:hover {
+  background-color: #ebc671;
+}
+.button9:hover {
+  background-color: #ebc671;
+}
+.button10:hover {
+  background-color: #ebc671;
+}
+.button11:hover {
+  background-color: #ebc671;
+}
+.button12:hover {
+  background-color: #ebc671;
+}
+.button13:hover {
+  background-color: #ebc671;
+}
+.button14:hover {
+  background-color: #ebc671;
+}
+.button15:hover {
+  background-color: #ebc671;
+}
+.button16:hover {
+  background-color: #ebc671;
+}
+.prev:hover {
+  background-color: #ebc671;
+}
+.next:hover {
+  background-color: #ebc671;
+}
